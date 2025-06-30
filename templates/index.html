@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salary Predictor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #dde5ee;
+      color: #434249;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+        color: #0a3d62;
+        font-size: 3rem;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h3 {
+      text-align: center;
+      margin-top: 10px;
+      color: #5a7b96;
+    }
+
+    
+
+    .container {
+      padding: 40px;
+      margin-top: 55px;
+
+      background-color: #dfe4e1;
+      height: auto;
+      width: fit-content;
+      border: 2px solid black;
+      border-radius: 29px;
+      box-shadow: #12584c 0px 10px 20px -5px, #0a3d62 0px 6px 6px -6px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Salary Predictor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h1>Welcome To Salary Predictor </h1>
+  <h3>By-Harsh Bhatnagar</h3>
+
+  <div class="container">
+    <h2>
+      Fill in the details below to predict your salary
+
+    </h2>
+
+    <form action="/predict" method="post">
+      <div class="mb-3">
+        <select class="form-select form-select-sm" aria-label="Small select example" name="degree" required>
+          <option value="" selected disabled>Select Degree</option>
+          <option value="1">B.Sc</option>
+          <option value="2">B.Tech</option>
+          <option value="3">BCA</option>
+          <option value="4">M.Sc</option>
+          <option value="5">M.Tech</option>
+          <option value="6">MCA</option>
+          <option value="7">PhD</option>
+        </select>
+      </div>
+
+      <div class="input-group mb-3 space">
+        <span class="input-group-text" id="inputGroup-sizing-default">How many Technical Skills Do You Have</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" name="technical_skills" required>
+      </div>
+
+      <div class="input-group mb-3 space">
+        <span class="input-group-text" id="inputGroup-sizing-default">How many Soft Skills Do You Have</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" name="soft_skills" required>
+      </div>
+
+      <div class="input-group mb-3 space">
+        <span class="input-group-text" id="inputGroup-sizing-default">CGPA</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" name="CGPA" required>
+      </div>
+
+      <div class="input-group mb-3 space">
+        <span class="input-group-text" id="inputGroup-sizing-default">Projects</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" name="projects" required>
+      </div>
+
+      <div class="input-group mb-3 space">
+        <span class="input-group-text" id="inputGroup-sizing-default">Internships</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" name="internships" required>
+      </div>
+
+      <div class="input-group mb-3 space">
+        <span class="input-group-text" id="inputGroup-sizing-default">Communication Skills Level (0-10)</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" name="csl" required>
+      </div>
+
+      <div class="input-group mb-3 space">
+        <span class="input-group-text" id="inputGroup-sizing-default">Technical skills Level</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" name="tsl" required>
+      </div>
+
+      <div class="input-group mb-3 space">
+        <span class="input-group-text" id="inputGroup-sizing-default">Years Of Expierience</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" name="years" required>
+      </div>
+
+      <div class="mb-3">
+        <select class="form-select form-select-sm" aria-label="Small select example" name="specialization" required>
+          <option value="" selected disabled>Select Specialization</option>
+          <option value="1">App Development</option>
+          <option value="2">Cybersecurity</option>
+          <option value="3">Data Science</option>
+          <option value="4">Cloud Computing</option>
+          <option value="5">AI/ML</option>
+          <option value="6">Web Development</option>
+        </select>
+
+      </div>
+
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </div>
+
+    </form>
+
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
