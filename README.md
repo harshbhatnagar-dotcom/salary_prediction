@@ -1,2 +1,11 @@
-This is a simple ML Model which is made for learning purpose
-I have used Scikit learn to trian my model
+A simple and interactive **machine learning-powered Flask web application** that predicts an estimated salary based on a user's educational background, technical and soft skills, experience, and specialization.
+- 🌐 Web interface built with **Flask** and **Bootstrap**
+- 🎯 Predicts salary based on:
+  - Degree (e.g. B.Tech, M.Sc)
+  - Specialization (e.g. Data Science, Cybersecurity)
+  - CGPA
+  - Technical & Soft Skills
+  - Communication & Teamwork Levels
+  - Internships, Projects, Experience
+- 📊 Model trained using **scikit-learn** and saved via `joblib`
+- 
