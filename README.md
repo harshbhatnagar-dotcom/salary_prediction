@@ -8,4 +8,12 @@ A simple and interactive **machine learning-powered Flask web application** that
   - Communication & Teamwork Levels
   - Internships, Projects, Experience
 - 📊 Model trained using **scikit-learn** and saved via `joblib`
-- 
+  
+## 🛠 Technologies Used
+
+- Python 3.10+
+- Flask
+- HTML/CSS (Bootstrap 5)
+- scikit-learn
+- joblib
+- pandas & numpy
